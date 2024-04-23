@@ -25,11 +25,11 @@ This project should be simple enough to generalise to other hardware, but to rep
 The VTX module we are using is analog, so the key to making this work is getting a connection from the Pi's composite output to the VTX. If we keep that in mind, this is all relatively straightforward. 
 
 ### Two Output Options
-The Pi comes with an AV jack as standard which offers one potential solution, but this will require some hackery of the RCA cable. A more generalisable solution, which can be used with other Pi boards, is to use the relevant test points on the back of the board. The messy example below shows an instance of this for a RPi4B. In essence, you solder the video input of the VTX to the composite video output of the Pi and then ground the connection. 
+The Pi comes with an AV jack as standard which offers one potential solution, but this will require some hackery of the RCA cable. A more generalisable solution, which can be used with other Pi boards, is to use the relevant test points on the back of the board. The messy example below shows an instance of this for a RPi4B. In essence, you solder the video input of the VTX to the composite video output test point of the Pi (TP24) and then ground the connection. 
 
 ![Hacky setup](images/hacky_av.jpg "Hacky setup")
 
-I found these test points by consulting the documentation, which for the RPiB4 can be found [here](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-reduced-schematics.pdf). The downside to this is that the test points are not really meant to be used for permanent connections, which meant the general quality of the image was relatively poor. The GIF'd footage below is the result of the test point connection and not helped by the lazy use of an unmatched antenna. 
+I found these test points by consulting the documentation, which for the RPi4B can be found [here](https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-reduced-schematics.pdf). The downside to this is that the test points are not really meant to be used for permanent connections, which meant the general quality of the image was relatively poor. The GIF'd footage below is the result of the test point connection and not helped by the lazy use of an unmatched antenna. 
 
 ![Recieved footage](images/rx_footage.gif "Recieved footage")
 
